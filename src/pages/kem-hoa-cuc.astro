@@ -1,4 +1,10 @@
 ---
+import Feature from '../components/Feature.astro'
+import Review from '../components/Review.astro'
+import ForWho from '../components/ForWho.astro'
+import Ingredient from '../components/Ingredient.astro'
+
+import '../styles/global.css'
 
 ---
 
@@ -11,6 +17,11 @@
 		<title>Kem Dưỡng Hoa Cúc</title>
 	</head>
 	<body>
-		<h1>Thông tin về kem hoa cúc ở đây</h1>
+
+		<Feature />
+		
+		<ForWho />
+		<Ingredient />
+		<!-- <Review /> -->
 	</body>
 </html>
