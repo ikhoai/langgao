@@ -1,13 +1,29 @@
 --- 
 import { Image } from 'astro:assets'
 import mainImage from '../images/main-img.jpg'
+
+import '../styles/global.css'
 ---
 
 <div class="align-center">
-  <Image src={mainImage} alt="Main Image" />
+  <div class="relative">
+    <div class="overlay-title absolute top-1/3 left-4 w-1/2 uppercase">Kem Dưỡng Hoa Cúc</div>
+    <Image src={mainImage} alt="Main Image" />
+  </div>
+  
   <div class="p-6 text-center">
-    <p>Khởi nguồn từ những chuyến đi lên vùng cao mùa đông, hình ảnh đôi má ửng đỏ và đôi môi nứt nẻ của các em bé nơi đây đã khiến chúng tôi không khỏi trăn trở. Với mong muốn mang đến sự chăm sóc dịu nhẹ và lành tính nhất, sau nhiều năm nghiên cứu và thử nghiệm, Kem Dưỡng Hoa Cúc chính thức ra đời. 
       <p class="mt-4">Sản phẩm là sự kết tinh từ những dưỡng chất quý giá như hoa cúc chi, tinh bột nghệ, dầu dừa, sáp ong và dầu cám gạo. Với 100% thành phần tự nhiên, Kem Dưỡng Hoa Cúc như sự nuôi dưỡng dịu lành từ thiên nhiên. Đặc biệt phù hợp cho làn da nhạy cảm của mẹ bầu, em bé sơ sinh và trẻ nhỏ.</p>
   </div>
   </p>
 </div>
+
+<style>
+  .overlay-title {
+    font-family: 'ganh';
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+  }
+</style>

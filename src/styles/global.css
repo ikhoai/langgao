@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 
+@font-face {
+  font-family: 'ganh';
+  src: url('../fonts/ganh_regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   font-family: 'Vollkorn', serif;
   font-size: 18px;
