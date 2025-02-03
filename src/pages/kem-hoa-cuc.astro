@@ -4,6 +4,7 @@ import Feature from '../components/Feature.astro'
 import Review from '../components/Review.astro'
 import ForWho from '../components/ForWho.astro'
 import Ingredient from '../components/Ingredient.astro'
+import Testimonials from '../components/Testimonials.jsx'
 
 import '../styles/global.css'
 
@@ -22,8 +23,10 @@ import '../styles/global.css'
 		<Feature />
 		
 		<ForWho />
+		<Testimonials client:load />
 		<Ingredient />
 		<!-- <Review /> -->
+		
 		 <Analytics />
 	</body>
 </html>

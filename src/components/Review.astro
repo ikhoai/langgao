@@ -1,6 +1,93 @@
 ---
+import { Swiper, Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import testimonials from '../data/tesimonial.json'
 ---
 
 <div>
-  Review
+  <div class="swiper testimonial-slider">
+    <div class="swiper-wrapper">
+      {testimonials.map((testimonial) => (
+        <div class="swiper-slide">
+          <blockquote class="testimonial-card">
+            <p>{testimonial.content}</p>
+            <footer>
+              <img 
+                src={testimonial.avatar} 
+                alt={testimonial.author} 
+                width="60"
+                height="60"
+                loading="lazy"
+              />
+              <cite>{testimonial.author}</cite>
+            </footer>
+          </blockquote>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      new Swiper('.testimonial-slider', {
+        modules: [Navigation, Pagination],
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        breakpoints: {
+          768: {
+            slidesPerView: 2
+          },
+          1024: {
+            slidesPerView: 3
+          }
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    });
+    </script>
+    
+  
 </div>
+
+
+  
+  <style>
+    .testimonial-slider {
+      padding: 2rem 0;
+    }
+    
+    .testimonial-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: var(--color-primary);
+    }
+    
+    .swiper-pagination-bullet-active {
+      background: var(--color-primary);
+    }
+    </style>
+    
