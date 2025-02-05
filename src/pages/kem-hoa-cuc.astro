@@ -3,8 +3,10 @@ import Analytics from '@vercel/analytics/astro'
 import Feature from '../components/Feature.astro'
 import Review from '../components/Review.astro'
 import ForWho from '../components/ForWho.astro'
+import ForWhoIcon from '../components/ForWhoIcon.astro'
 import Ingredient from '../components/Ingredient.astro'
 import Testimonials from '../components/Testimonials.jsx'
+import Header from '../components/Header.jsx'
 
 import '../styles/global.css'
 
@@ -19,10 +21,11 @@ import '../styles/global.css'
 		<title>Kem Dưỡng Hoa Cúc</title>
 	</head>
 	<body class="max-w-xl mx-auto">
-
+		<Header  client:load/>
 		<Feature />
 		
 		<ForWho />
+		<ForWhoIcon />
 		<Testimonials client:load />
 		<Ingredient />
 		<!-- <Review /> -->
