@@ -56,7 +56,7 @@ export default function Testimonials() {
               <img
                 src={avatar}
                 alt={name}
-                className="w-18 h-18 rounded-full mb-4"
+                className="w-48 h-48 rounded-full mb-4"
               />
              
               <p className="text-center text-lg text-gray-700 italic mb-4">"{testimonial}"</p>
